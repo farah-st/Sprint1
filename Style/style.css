@@ -1,0 +1,194 @@
+/* General Reset */
+* {
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+/* Container */
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  border-bottom: 2px solid #f4acb7;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+/* Input Section */
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-section input[type="text"],
+.input-section input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.input-section input:focus {
+  box-shadow: 0 0 5px rgba(244, 172, 183, 0.7);
+  border-color: #f4acb7;
+}
+
+.input-section button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f4acb7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.input-section button:hover {
+  background-color: #ffcad4;
+  transform: translateY(-2px);
+}
+
+.input-section button:active {
+  transform: translateY(1px);
+}
+
+/* Task List */
+.task-list, .completed-task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Ensures task list spans the full container width */
+}
+
+.task-list li, .completed-task-list li{
+  margin: 10px 0; /* Space between tasks */
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%; /* Takes up the full width of the container */
+  box-sizing: border-box; 
+} 
+
+/* Task Actions (buttons) */
+.task-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end; /* Align buttons to the right */
+  margin-top: 10px;
+}
+
+.task-actions .toggle-task,
+.task-actions .delete-task {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-task {
+  background-color: #9d8189;
+  color: white;
+}
+
+.toggle-task:hover {
+  background-color: #c68e8f;
+}
+
+.delete-task {
+  color: black;
+  font-weight: bold;
+}
+
+.delete-task:hover {
+  background-color: darkred;
+}
+
+/* Completed Task Styling */
+.completed-task-list li {
+  text-decoration: line-through;
+  background-color: #e9f5e9;
+  border-color: #c8e6c9;
+  color: #6b8e23;
+  box-shadow: none; /* Remove box shadow for completed tasks */
+}
+
+.task-list li strong {
+  color: #333;
+  display: block; /* Makes "Task" and "Date" text stack vertically */
+}
+
+/* Empty State */
+.task-list:empty::before,
+.completed-task-list:empty::before {
+  content: 'No tasks here yet!';
+  color: #aaa;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .input-section button {
+    font-size: 0.9rem;
+  }
+
+  .task-list li, .completed-task-list li {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+
+
+
+
+  
